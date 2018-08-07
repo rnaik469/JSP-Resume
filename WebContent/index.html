@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Resume</title>
+<style>
+body {
+	background-color: white;
+}
+
+table {
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 700px;
+	padding: 30px;
+	color:white;
+	background: #9152f8;
+	border-radius:5px;
+    background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+.button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 8px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+.button:hover {
+    border: none;
+    background-color: #e7e7e7;
+    color: black;
+    padding: 8px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+.hob{
+font-family: 'Open Sans Condensed', arial, sans;
+    font-size: 14px;
+    width: 46%;
+}
+textarea{
+font-family: 'Open Sans Condensed', arial, sans;
+    font-size: 14px;
+}
+.file{
+font-family: 'Open Sans Condensed', arial, sans;
+    font-size: 12px;
+    width: 40%;
+    height: 30px;
+}
+.input{
+font-family: 'Open Sans Condensed', arial, sans;
+    font-size: 14px;
+    width: 40%;
+    height: 30px;
+    padding: 0 0 0 20px;
+    }
+
+
+ .head {
+    font-family: 'Open Sans Condensed', arial, sans;
+    font-size: 40px;
+    margin-top:20px;
+     text-shadow:0 2px 10px black;
+    font-weight:bold;
+    text-align: center;
+    text-transform: uppercase;	
+</style>
+</head>
+<body>
+		<div class="head">Create Your Resume</div>
+	<form action="resume" method="post">
+		<table>
+		<tr>
+				<td>First Name:</td>
+				<td><input type="text" class="input" name="fName" required /></td>
+			</tr>
+
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" class="input" name="lName" required /></td>
+			</tr>
+
+			<tr>
+				<td>Gender: First Name:</td>
+				<td><input type="radio" value="Male" name="gender" required />Male
+					<input type="radio" value="Female" name="gender" required />Female
+				</td>
+			</tr>
+
+			<tr>
+				<td>Highest Qualification:</td>
+				<td><input list="HQlist" class="input" name="HQValue" required> <datalist
+						id="HQlist">
+						<option value="B.E./BTech.">
+						<option value="MCA/MTech.">
+						<option value="MBA">
+						<option value="BSC">
+					</datalist></td>
+			</tr>
+			<tr>
+				<td>Date of Birth:</td>
+				<td> <input type="date" class="input"  name="dob" required>
+				</td>
+			</tr>
+			<tr>
+				<td>Hobbies:</td>
+				<td><select multiple class=hob name="hobbies" required="required">
+						<option value="Reading">Reading</option>
+						<option value="Writing">Writing</option>
+						<option value="Sleeping">Sleeping</option>
+						<option value="Playing">Playing</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><textarea rows="5"  cols="25" name="Address" required></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>Photo:</td>
+				<td><input type="file" class="file"name="photo"></td>
+			</tr>
+			<tr>
+				<td>Skills:</td>
+				<td><input type="checkbox" name="skills" value="C++" >C++
+					<input type="checkbox" name="skills" value="C">C <input
+					type="checkbox" name="skills" value="JAVA">JAVA <input
+					type="checkbox" name="skills" value="SQL">SQL <input
+					type="checkbox" name="skills" value="LINUX">LINUX <input
+					type="checkbox" name="skills" value="SCALA">SCALA<input
+					 type="checkbox" name="skills" value="SCALA">PYHTON
+					 </td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="email" class="input"  required name="email"></td>
+			</tr>
+			<tr>
+				<td>WebSite:</td>
+				<td><input type="url" class="input"  name="weburl"></td>
+			</tr>
+			<tr>
+				<td>Contact Number:</td>
+				<td><input type="tel"  class="input" name="contact"></td>
+			</tr>
+			<tr>
+				<td>Summary:</td>
+				<td><textarea rows="5" cols="25" name="desc" required></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><input class="button" type="submit" >  <input
+					class="button" type="reset"></td>
+			</tr>
+
+
+		</table>
+	</form>
+</body>
+</html>
