@@ -30,13 +30,16 @@ text-align: center;}
 <body>
 
 <div class="resume">
-<div class="details"><%= resume.getArrayImageSource()%></div>
 <h2><%=resume.getfName()%> <%=resume.getlName()%></h2> 
 <div class="details"><%= resume.getAddress()%></div>
 <div class="details"><%= resume.getGender()%></div>
+<div class="details"><%= resume.getDob()%></div>
 <div class="details"><%= resume.getEmail()%></div>
 <div class="details"><%= resume.getContactNo()%></div>
 <div class="details"><%= resume.getWebsite()%></div>
+<%String imgSrc= resume.getImageSource();%>
+<img src=imgSrc height="50
+" width="35"/>
 <h3> Summary</h3>
 <p><%= resume.getSummary() %></p>
 <hr>

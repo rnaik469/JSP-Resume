@@ -22,7 +22,7 @@ public class ResumeController extends HttpServlet {
 	/* (non-Javadoc)
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
-	protected void doPos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Resume resume=new Resume();	//Instantiating Class Resume
 		
 		//Set parameters from html page to setters
@@ -38,7 +38,7 @@ public class ResumeController extends HttpServlet {
 		resume.setEmail(request.getParameter("email"));
 		resume.setGender(request.getParameter("gender"));
 		resume.setHobbies(request.getParameterValues("hobbies"));
-		resume.setArrayImageSource(request.getParameter("photo"));
+		resume.setImageSource(request.getParameter("photo"));
 		request.setAttribute("ResumeModel", resume);
 		
 		//Request for output.jsp
